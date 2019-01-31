@@ -1,14 +1,15 @@
 <vidio>
 <audio>
 <canvas> <-- drawing area
-JS fxns can draw onto a canvas element <-- given an id
+JS fxns an draw onto a canvas element <-- given an id
 only 2 attr: height and width <-- default to w:300 & h:150
 assignable via DOM manipulation (JS calls)
 
 
-
+<div>
 <canvas height="600" width="600" id="slate">
 fallback/alternate display text here (for old, noncompliant browsers)
+</div>
 </canvas>
 
 

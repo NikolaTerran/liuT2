@@ -17,11 +17,14 @@ r.addEventListener("click",changer);
 //https://stackoverflow.com/questions/3234256/find-mouse-position-relative-to-element
 
 function draw(e){
-		var x = e.pageX - c.offsetLeft; //event.clientX;
-		var y = e.pageY - c.offsetTop; //event.clientY;
-		console.log(x + ":" +  y);
+		var x = e.pageX - c.offsetLeft - 10; //event.clientX;
+		var y = e.pageY - c.offsetTop - 10; //event.clientY;
+		console.log(e.pageX + ":" + c.offsetX);
 	if(d.value == 1){
-		ctx.fillRect(x,y,1,1);
+		//began tracing the circle
+		ctx.beginPath();
+ctx.arc(x, y, 5, 0, 2 * Math.PI);
+ctx.fill();
 	}
 	if(r.value == 1){
 		ctx.fillRect(x,y,50,75);
