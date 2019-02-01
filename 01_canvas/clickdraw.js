@@ -13,14 +13,14 @@ var ctx = c.getContext("2d");
 var d = document.getElementById("dot");
 var r = document.getElementById("rect");
 
-var di = document.getElementById("dot+");
-var dd = document.getElementById("dot-");
+var di = document.getElementById("dota");
+var dd = document.getElementById("dotm");
 
-var wi = document.getElementById("w+");
-var wd = document.getElementById("w-");
+var wi = document.getElementById("wa");
+var wd = document.getElementById("wm");
 
-var hi = document.getElementById("h+");
-var hd = document.getElementById("h-");
+var hi = document.getElementById("ha");
+var hd = document.getElementById("hm");
 
 var dget = document.getElementById("dsize");
 var rget = document.getElementById("rectsize");
@@ -33,8 +33,8 @@ toggle.addEventListener("click", rect_dot);
 c.addEventListener("click", draw);
 la.addEventListener("click",clear);
 
-d.addEventListener("click",changed);
-r.addEventListener("click",changer);
+//d.addEventListener("click",changed);
+//r.addEventListener("click",changer);
 
 di.addEventListener("click",dsizeu);
 dd.addEventListener("click",dsized);
@@ -100,7 +100,7 @@ function draw(e){
 		var x = e.offsetX; //event.clientX;
 		//relate to the top edge of the div(canvas) (border counted)
 		var y = e.offsetY; //event.clientY;
-		console.log(toggle.value);
+		console.log(di);
 	if(
 	//d.value == 1 || 
 	subtoggle == 0){
