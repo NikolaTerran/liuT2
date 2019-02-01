@@ -13,11 +13,34 @@ fallback/alternate display text here (for old, noncompliant browsers)
 </canvas>
 
 
+Paths used to draw arbitrary shapes,
+including circles and curves
 
+* A contxt can keep track of one path at a time
+* Path is not drawn until stroke() is called
+* A path is considered done when beginPath() is called anew
 
+beginPath()
+ 	Starts or resets current path
+stroke()
+ 	Renders all the lines in the path, doees not end 
+ 	the path.
+fill()
+ 	Fills the interior of the path,
+ 	Will not work if the path has fewer than 3 points in it
+arc()
+ 	Draws an arc.
 
-
-
+Useful JS commands:
+moveTo(X, Y)
+ 	Move path to position (x,y)
+ 	Does not result in a line or a filled in section
+lineTo(X, Y)
+ 	Moves path to position (x,y)
+ 	will result in a line and a filled in section
+closePath()
+ 	Results in a line from current position to start pos
+ 	Path can be continued after
 
 
  

@@ -1,0 +1,46 @@
+<!DOCTYPE = html>
+<html>
+	<head>
+		<style>
+			#playground {border: 1px solid black}
+		</style>
+	</head>
+	<body>
+		<canvas height="600" width="600" id="playground" style="color:green;background-color:green">
+		hello!
+		</canvas>
+		
+		<button id="clear">
+		clear cvs
+		</button>
+		<!--
+		<button id="rect" value=1 style="background-color:red">
+		draw rectangle
+		</button>
+		<button id="dot" value=0 style="background-color:white">
+		draw dot
+		</button>
+		-->
+		<label class="switch" id="switch" value=0>
+  			click the checkbox to switch between drawing rectangle and dot
+  			<input type="checkbox">
+  			<span class="slider"></span>
+		</label>
+		
+		<br>
+		<br>
+		<button id="dota"> dot size +1 </button> <button id="dotm"> dot size -1 </button> 
+		<p id="dsize"> dotsize: 5</p>
+
+		<button id="wa"> rectangle width +1 </button><button id="wm"> rectangle width -1 </button>
+		<br>
+		<button id="ha"> rectangle height +1 </button><button id="hm"> rectangle height -1 </button>
+		<p id="rectsize"> rectangle size: 50 x 75</p>
+		<a id="prevent" href = "http://www.youtube.com">click this link won't take you to youtube but will clear the canvas</a> 
+	</body>
+	<footer>
+		<script src="clickdraw.js">
+		
+		</script>
+</html>
+
