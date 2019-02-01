@@ -1,6 +1,11 @@
 //jmai3
 //Jiajie mai
 
+var dsize = 5;
+var w = 50;
+var h = 75;
+var subtoggle = 0;
+
 var c = document.getElementById("slate");
 var la = document.getElementById("ok");
 var ctx = c.getContext("2d");
@@ -8,26 +13,106 @@ var ctx = c.getContext("2d");
 var d = document.getElementById("dot");
 var r = document.getElementById("rect");
 
+var di = document.getElementById("dot+");
+var dd = document.getElementById("dot-");
+
+var wi = document.getElementById("w+");
+var wd = document.getElementById("w-");
+
+var hi = document.getElementById("h+");
+var hd = document.getElementById("h-");
+
+var dget = document.getElementById("dsize");
+var rget = document.getElementById("rectsize");
+
+var youtube = document.getElementById("prevent");
+var toggle = document.getElementById("switch");
+
+toggle.addEventListener("click", rect_dot);
+
 c.addEventListener("click", draw);
 la.addEventListener("click",clear);
 
 d.addEventListener("click",changed);
 r.addEventListener("click",changer);
 
+di.addEventListener("click",dsizeu);
+dd.addEventListener("click",dsized);
+
+wi.addEventListener("click",wsizeu);
+wd.addEventListener("click",wsized);
+
+hi.addEventListener("click",hsizeu);
+hd.addEventListener("click",hsized);
+
+//click this link won't take you to youtube like default
+youtube.addEventListener("click",function(event){event.preventDefault();
+						 clear();});
 //https://stackoverflow.com/questions/3234256/find-mouse-position-relative-to-element
 
+function rect_dot(e){
+	
+	if(subtoggle == 1){
+		subtoggle = 0;
+	}else{
+		subtoggle = 1;
+	}
+}
+
+function dsizeu(e){
+	dsize += 1;
+	var text = "dotsize: " + dsize;
+	dget.innerHTML = text;
+}
+
+function dsized(e){
+	dsize -= 1;
+	var text = "dotsize: " + dsize;
+	dget.innerHTML = text;
+}
+
+function wsizeu(e){
+	w += 1;
+	var text = "rectangle size: " + w + " x " + h;
+	rget.innerHTML = text;
+}
+
+function wsized(e){
+	w -= 1;
+	var text = "rectangle size: " + w + " x " + h;
+	rget.innerHTML = text;
+}
+
+function hsizeu(e){
+	h += 1;
+	var text = "rectangle size: " + w + " x " + h;
+	rget.innerHTML = text;
+}
+
+function hsized(e){
+	h -= 1;
+	var text = "rectangle size: " + w + " x " + h;
+	rget.innerHTML = text;
+}
+
 function draw(e){
-		var x = e.pageX - c.offsetLeft - 10; //event.clientX;
-		var y = e.pageY - c.offsetTop - 10; //event.clientY;
-		console.log(e.pageX + ":" + c.offsetX);
-	if(d.value == 1){
+		//relate to the left edge of the div(canvas) (border counted)
+		var x = e.offsetX; //event.clientX;
+		//relate to the top edge of the div(canvas) (border counted)
+		var y = e.offsetY; //event.clientY;
+		console.log(toggle.value);
+	if(
+	//d.value == 1 || 
+	subtoggle == 0){
 		//began tracing the circle
 		ctx.beginPath();
-ctx.arc(x, y, 5, 0, 2 * Math.PI);
+ctx.arc(x, y, dsize, 0, 2 * Math.PI);
 ctx.fill();
 	}
-	if(r.value == 1){
-		ctx.fillRect(x,y,50,75);
+	if(
+	//r.value == 1 || 
+	subtoggle == 1){
+		ctx.fillRect(x,y,w,h);
 	}
 }
 
