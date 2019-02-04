@@ -43,4 +43,23 @@ closePath()
  	Path can be continued after
 
 
+you will not use 
+setTimeout() 
+setInterval()
  
+ 
+window.requestAnimationFrame()
+* executes on next available screen repaint
+* pauses for background tabs, hidden frames, etc.
+* is automatically passed a timestamp to mark call time
+* returns a nonzero integer (canbe used as id)
+* 60 fps (target)
+* can be optimized by browser (smoother animations)
+* more respurce efficient (battery-friendly)
+
+syntax:
+	requestAnimationFrame(callback) 
+	
+window.cancelAnimationFrame()
+* stops animation
+syntax: cancelAnimationFrame (id)
