@@ -1,0 +1,68 @@
+<!DOCTYPE = html>
+<html>
+	<head>
+		<meta charset="UTF-8"> 
+		<style>
+			#playground {border: 5px solid black}
+			#anime {border: 5px solid black}
+		</style>
+	</head>
+	<body>
+	
+	<canvas height="600px" width="600" id="anime" style="background-color:yellow">
+	</canvas>
+	
+	<button id="ani_start">I’m an Animaniac!</button>
+	<button id="dvd">Bouncing dvd</button>
+	<button id="stop">stop!</button>
+	<h4>choose your poison</h4>
+	<button id="red" style="background-color:red"> &nbsp </button> 
+	<button id="orange" style="background-color:orange"> &nbsp  </button> 
+	<button id="yellow" style="background-color:yellow"> &nbsp  </button> 
+	<button id="green" style="background-color:green">&nbsp   </button> 
+	<button id="cyan" style="background-color:cyan"> &nbsp  </button> 
+	<button id="blue" style="background-color:blue"> &nbsp  </button> 
+	<button id="purple" style="background-color:purple"> &nbsp  </button> 
+	<button id="black" style="background-color:black"> &nbsp  </button>
+	<button id="white" style="background-color:white"> &nbsp  </button> 
+	<br>
+	<br>
+
+		<canvas height="600" width="600" id="playground" style="color:green;background-color:green">
+		hello!
+		</canvas>
+		
+		<button id="clear">
+		clear cvs
+		</button>
+		<!--
+		<button id="rect" value=1 style="background-color:red">
+		draw rectangle
+		</button>
+		<button id="dot" value=0 style="background-color:white">
+		draw dot
+		</button>
+		-->
+		<label class="switch" id="switch" value=0>
+  			click the checkbox to switch between drawing rectangle and dot
+  			<input type="checkbox">
+  			<span class="slider"></span>
+		</label>
+		
+		<br>
+		<br>
+		<button id="dota"> dot size +1 </button> <button id="dotm"> dot size -1 </button> 
+		<p id="dsize"> dotsize: 5</p>
+
+		<button id="wa"> rectangle width +1 </button><button id="wm"> rectangle width -1 </button>
+		<br>
+		<button id="ha"> rectangle height +1 </button><button id="hm"> rectangle height -1 </button>
+		<p id="rectsize"> rectangle size: 50 x 75</p>
+		<a id="prevent" href = "http://www.youtube.com">click this link won't take you to youtube but will clear the canvas</a> 
+	</body>
+	<footer>
+		<script src="dotconn.js">
+		
+		</script>
+</html>
+

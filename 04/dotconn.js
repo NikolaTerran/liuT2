@@ -69,10 +69,15 @@ var toggle = document.getElementById("switch");
 var anime = document.getElementById("anime");
 var starto = document.getElementById("ani_start");
 var stop = document.getElementById("stop");
+var dvd_button = document.getElementById("dvd");
 
 var ani_con = anime.getContext("2d");
 
+
+
 // event listening
+
+
 toggle.addEventListener("click", rect_dot);
 
 c.addEventListener("click", draw);
@@ -92,7 +97,7 @@ hd.addEventListener("click",hsized);
 
 starto.addEventListener("click",draw_circle);
 stop.addEventListener("click", stop_ani);
-
+dvd_button.addEventListener("click",dvd_ani);
 
 
 //https://stackoverflow.com/questions/256754/how-to-pass-arguments-to-addeventlistener-listener-function
@@ -126,6 +131,40 @@ function foo(){
 var progress;
 var id;
 
+	//dvd stuff
+	var x_move = 1;
+	var y_move = 1;
+	var cur_x = 200;
+	var cur_y = 50;
+	var border_x = 170;
+	var border_y = 150;
+	function dvd_ani(){
+		cancelAnimationFrame(id);
+	    ani_con.clearRect(0,0,anime.height,anime.width);
+		drawing = new Image();
+		drawing.src = "image.png";
+		if(cur_x + border_x >= anime.width){
+			x_move = -1;
+		}
+		
+		if(cur_x <= 0){
+			x_move = 1;
+		}
+		
+		if(cur_y + border_y >= anime.height){
+			y_move = -1;
+		}
+		
+		if(cur_y + 50 <= 0){
+			y_move = 1;
+		}
+		
+		ani_con.drawImage(drawing,cur_x,cur_y);
+		cur_x += x_move;
+		cur_y += y_move;
+		id = requestAnimationFrame(dvd_ani);
+	}
+
 function poison(x){
 	switch(x){
 		case 1: color = "#FF0000";
@@ -156,7 +195,7 @@ function poison(x){
 
 function draw_circle(timestamp){
 	cancelAnimationFrame(id);
-	console.log(timestamp);
+	//console.log(timestamp);
 	if(!start_time){
 		start_time = timestamp;
 	}
