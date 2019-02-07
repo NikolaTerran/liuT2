@@ -138,6 +138,11 @@ var id;
 	var cur_y = 50;
 	var border_x = 170;
 	var border_y = 150;
+	
+	//https://stackoverflow.com/questions/23830471/convert-image-color-without-changing-its-transparent-background
+	//var imageData=context.getImageData(0,0,canvas.width,canvas.height);
+	//var data=imageData.data;
+	
 	function dvd_ani(){
 		cancelAnimationFrame(id);
 	    ani_con.clearRect(0,0,anime.height,anime.width);
