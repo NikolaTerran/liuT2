@@ -97,7 +97,8 @@ hd.addEventListener("click",hsized);
 
 starto.addEventListener("click",draw_circle);
 stop.addEventListener("click", stop_ani);
-dvd_button.addEventListener("click",dvd_ani);
+dvd_button.addEventListener("click",function(){cur_x = Math.random() * 500;
+cur_y = Math.random() * 500;dvd_ani();});
 
 
 //https://stackoverflow.com/questions/256754/how-to-pass-arguments-to-addeventlistener-listener-function
@@ -142,6 +143,7 @@ var id;
 	//https://stackoverflow.com/questions/23830471/convert-image-color-without-changing-its-transparent-background
 	//var imageData=context.getImageData(0,0,canvas.width,canvas.height);
 	//var data=imageData.data;
+	
 	
 	function dvd_ani(){
 		cancelAnimationFrame(id);

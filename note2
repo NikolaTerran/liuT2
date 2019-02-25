@@ -1,0 +1,73 @@
+Q: drawbacks of a relational database?
+
+* fixed schema
+  * must be known ahead of time
+  * problematic to change after db up and running
+* lists are problematic
+* redundant data (in the bad way)
+* must live on single host
+
+NoSQL 
+document-oriented DB
+Non table-based/relational DBS
+
+Key-Value:DB is essentially a huge dictionary
+Graph: DB stored as graph,
+ w/ relationships b/t nodes crucial
+
+Document: DB is a collection of documents.
+ each containing unfixed data (amount, type)
+
+Document-oriented DB rough equivalences:
+SQL        DocDB
+record     doc
+table      collection
+
+Document-oriented DB:
+* each record stored as a doc (instead of row in table)
+* each doc contains
+   all data associated w/ given record,
+    as key-value pairs ("fields" w/ values)
+* fields need no type specification
+* a field may contain different types of data,
+	eg. list, dict, etc.
+*docs may be grouped together in a collection
+*docs in a collection need 
+
+We will use a popular doc DB
+ MongoDB
+
+Example:
+{ _id: ObjectId
+  title:
+  description
+}
+
+NoSQL (not-only SQL)
+*mongod server process runs on one host
+*can contain/manage multiples DBs
+* mongo client processes (potentially many) 
+	communicate w/ server
+* various languages offer libraries for talking to a mongo server
+	pymongo
+
+MONGO WORKFLOW
+1. connvect server
+2. pick DB on server
+3. manipulate collections in this DB
+4. by manipulating docs in coll
+
+Assuming a running mongo server, you may connect via
+	mongo shell
+or
+	pymongo
+
+db.collection.insert(<doc>)
+* add doc to collection
+* if <collection> !exist, crete
+* a DB or collection DNE until it contains a doc
+* if <doc> does not contain _id field, mongo shell
+  automatically adds it, sets value to a generated
+  ObjectID
+
+

@@ -63,3 +63,4 @@ syntax:
 window.cancelAnimationFrame()
 * stops animation
 syntax: cancelAnimationFrame (id)
+
