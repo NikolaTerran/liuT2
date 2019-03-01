@@ -64,7 +64,7 @@ def four():
 	#xtx = raw_input("enter the grade\n")
 	#for post in doc.find({"$and":[{"address.zipcode":txt},{$where:"grades.grade < xtx"}]}):
 	#	pprint.pprint(post)
-	pprint("donno how to do it, need more time reading the pymongo doc\n")
+	print("donno how to do it, need more time reading the pymongo doc\n")
 
 def five():
 	print("bye\n")
