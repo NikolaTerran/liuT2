@@ -60,11 +60,16 @@ def three():
 		pprint.pprint(post)
 
 def four():
-	#txt = raw_input("enter the zipcode\n")
-	#xtx = raw_input("enter the grade\n")
-	#for post in doc.find({"$and":[{"address.zipcode":txt},{$where:"grades.grade < xtx"}]}):
+	txt = raw_input("enter the zipcode\n")
+	xtx = input("enter the score\n")
+	for post in doc.find({"$and":[{"address.zipcode":txt},
+	{"grades.score":{"$lt":xtx}
+	
+	}]}):
+		pprint.pprint(post)
 	#	pprint.pprint(post)
-	print("donno how to do it, need more time reading the pymongo doc\n")
+	#print("donno how to do it, need more time reading the pymongo doc\n")
+
 
 def five():
 	print("bye\n")
