@@ -1,3 +1,9 @@
+"""
+dataset = list of current US senators
+https://www.govtrack.us/api/v2/role?current=true&role_type=senator
+I just edited it use text editor to format it in the format I want 
+then I just used mongoimport with --jsonArray attached to it
+"""
 import pymongo
 import pprint
 from pymongo import MongoClient
@@ -12,9 +18,9 @@ def signal_handler(sig, frame):
 
 #conf
 addr = 'mud.ddns.net:27017'
-db = 'magic'
-collection = 'cards'
-json_file = 'primer-dataset.json'
+db = 'gov'
+collection = 'senators'
+json_file = 'senator.json'
 #endconf
 
 signal.signal(signal.SIGINT, signal_handler)
@@ -38,34 +44,33 @@ while line:
 fd.close()
 """
 
-doc = db.doc
 #pprint.pprint(doc.find_one())
 
 def one():
 	#print("ok\n")
-	txt = raw_input("enter the zipcode\n")
-	for post in doc.find({"address.zipcode":txt}):
+	print("first letter of your response should be capitalized")
+	txt = raw_input("enter the firstname\n")
+	for post in collection.find({"person.firstname":txt}):
 		pprint.pprint(post)
 	#{"address": {"zipcode": txt}}))
 
 def two():
-	txt = raw_input("enter the borough\n")
-	for post in doc.find({"borough":txt}):
+	print("first letter of your response should be capitalized")
+	txt = raw_input("enter the lastname\n")
+	for post in collection.find({"person.lastname":txt}):
 		pprint.pprint(post)
 
 def three():
-	txt = raw_input("enter the zipcode\n")
-	xtx = raw_input("enter the grade\n")
-	for post in doc.find({"$and":[{"address.zipcode":txt},{"grades.grade":xtx}]}):
+	#txt = raw_input("enter the cspnid\n")
+	xtx = input("enter the cspanid\n")
+	for post in collection.find({"person.cspanid":xtx}):
 		pprint.pprint(post)
 
 def four():
-	txt = raw_input("enter the zipcode\n")
-	xtx = input("enter the score\n")
-	for post in doc.find({"$and":[{"address.zipcode":txt},
-	{"grades.score":{"$lt":xtx}
-	
-	}]}):
+	print("first letter of your response should be capitalized, and don't append \"party\" to it")
+	txt = raw_input("enter the party name\n")
+	#xtx = input("enter the score\n")
+	for post in collection.find({"party":txt}):
 		pprint.pprint(post)
 	#	pprint.pprint(post)
 	#print("donno how to do it, need more time reading the pymongo doc\n")
@@ -79,10 +84,10 @@ while True:
 	print("Pymongo demo program")
 	print("Using mongodb at " + addr)
 	print("choose one")
-	print("1. get all restaurants in a specified zip code")
-	print("2. get all restaurants in a specified borough")
-	print("3. get all restaurants in a specified zip code and with a specified grade")
-	print("4. get all restaurants in a specified zip code with a score below a specified threshold")
+	print("1. find senator/s by firstname")
+	print("2. find senator/s by lastname")
+	print("3. find senator by cspanid")
+	print("4. find senator by party")
 	print("other: exit\n")
 	txt = input("waiting for a numerical input\n")
 	
