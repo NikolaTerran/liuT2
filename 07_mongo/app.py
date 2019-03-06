@@ -1,9 +1,24 @@
+#Team Raspberry pi
+#Tianrun Liu
+#
+#
+#
+#
+#
+#
+#
+
+
+
+
 """
 dataset = list of current US senators
 https://www.govtrack.us/api/v2/role?current=true&role_type=senator
 I just edited it use text editor to format it in the format I want 
 then I just used mongoimport with --jsonArray attached to it
 """
+import os
+from flask import *
 import pymongo
 import pprint
 from pymongo import MongoClient
@@ -15,6 +30,26 @@ import sys
 def signal_handler(sig, frame):
 	print('bye\n')
 	sys.exit(0)
+
+app = Flask(__name__)
+
+@app.route('/')
+def main():
+	return render_template("home.html")
+
+@app.route('/connect')
+def connectdb():
+	if(request.method == "POST"):
+		addr = request.form['ip']
+		return render_template("request.html")
+	else:
+		return render_template("home.html")
+
+@app.route('/request')
+def respond():
+	#if(request.method == "POST"):
+		#addr = request.form[]
+	return render_template("response.html")
 
 #conf
 addr = 'mud.ddns.net:27017'
@@ -80,9 +115,11 @@ def five():
 	print("bye\n")
 	sys.exit(0)
 
+"""
 while True:
 	print("Pymongo demo program")
 	print("Using mongodb at " + addr)
+	print("Please make sure your pymongo version <= 3.4.0")
 	print("choose one")
 	print("1. find senator/s by firstname")
 	print("2. find senator/s by lastname")
@@ -101,3 +138,10 @@ while True:
 		four()
 	else:
 		five()
+"""
+
+#if necessary, comment out the code below and uncomment
+#code above to test db functionality
+if __name__ == "__main__":
+	app.debug = True
+	app.run
