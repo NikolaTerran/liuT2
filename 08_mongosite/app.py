@@ -17,9 +17,10 @@ https://www.govtrack.us/api/v2/role?current=true&role_type=senator
 I just edited it use text editor to format it in the format I want 
 then I just used mongoimport with --jsonArray attached to it
 """
+import json
 import os
-from flask import *
-import pymongo
+from flask import Flask, render_template, request, redirect, url_for, session
+#from flask_pymongo import PyMongo
 import pprint
 from pymongo import MongoClient
 from bson import json_util
@@ -41,6 +42,7 @@ import sys
 #	sys.exit(0)
 
 app = Flask(__name__)
+app.secret_key = os.urandom(32)
 
 @app.route('/', methods=['GET','POST'])
 def main():
@@ -54,19 +56,28 @@ def main():
 		#my db and collection name
 		db = client['gov']
 		collection = db['senators']
+		print(collection)
+		session['addr'] = addr;
 		##########################
-		return render_template("request.html")
+		return redirect(url_for("connectdb",hello=collection))
 	else:
 		return render_template("home.html")
 
 @app.route('/connect',methods=['GET','POST'])
 def connectdb():
-	if request.method == 'POST':
-		if request.form['first'] is not None:
-			for post in collection.find({"person.firstname":request.form['first']}):
-			return redirect(url_for('respond'))
-	else:
-		return redirect(url_for('connectdb'))
+	#if request.method == 'POST':
+	#	if request.form['first'] is not None:
+			#txt = request.values.get("first")
+			#print(txt)
+			
+			#result = collection.find({"person.firstname":txt})
+	print(hello)
+			#print(result)
+			#	pprint.pprint(post)
+			
+	return render_template("respond.html")
+	#else:
+	#	return redirect(url_for('connectdb'))
 
 @app.route('/respond')
 def respond():
