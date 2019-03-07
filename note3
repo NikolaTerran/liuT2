@@ -1,0 +1,34 @@
+LATEX
+Clara Mohri and Max Millar
+
+TeX
+-typesetting system
+written by Donald Knuth
+First released in 1978
+gOALs to produce
+
+Latex
+ Pronounced Lah-tech
+ created by leslie lamport in 1983
+ runs on top of Tex
+ Document preparation sustem
+ ideology that document 
+ 
+ How it work
+ TeX interprets the Latex code
+ macro -> Tex
+ 
+ Sample document
+ \title\LaTex
+ 
+	\begin(document)
+	\maketitle
+	\LaTex{] is a document preparation
+ 
+ 
+ Easy to format math equation
+ 
+ latex.project.org
+ 
+ Overleaf
+ 

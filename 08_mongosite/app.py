@@ -2,14 +2,6 @@
 #Tianrun Liu
 #
 #
-#
-#
-#
-#
-#
-
-
-
 
 """
 dataset = list of current US senators
@@ -17,8 +9,9 @@ https://www.govtrack.us/api/v2/role?current=true&role_type=senator
 I just edited it use text editor to format it in the format I want 
 then I just used mongoimport with --jsonArray attached to it
 """
-#import json
+
 import os
+from collections import OrderedDict
 from flask import Flask, render_template, request, redirect, url_for, session
 #from flask_pymongo import PyMongo
 import pprint
@@ -37,10 +30,6 @@ import sys
 #json_file = 'senator.json'
 #endconf
 
-#def signal_handler(sig, frame):
-#	print('bye\n')
-#	sys.exit(0)
-
 app = Flask(__name__)
 app.secret_key = os.urandom(32)
 
@@ -55,12 +44,12 @@ def main():
 		addr = request.form['ip']
 		db = request.form['db']
 		collection = request.form['collection']
-		client = MongoClient(addr)
+		client = MongoClient(addr,document_class=OrderedDict)
 
 
 		#my db and collection name
-		db = client['gov']
-		collection = db['senators']
+		db = client[db]
+		collection = db[collection]
 		data.collection = collection 
 		print(collection)
 		session['addr'] = addr
@@ -79,13 +68,14 @@ def connectdb():
 		if request.form['first'] is not None:
 			txt = request.values.get("first")
 			#print(txt)
-			
-			result = data.collection.find({"person.firstname":txt})
+			list = []
+			for senator in data.collection.find({"person.firstname":txt}):
+				pprint.pprint(senator)
 	#json_util.dups(collection)
 	#session['collection'] = collection
 			#print(result)
 			#	pprint.pprint(post)
-		print(result)	
+		#print(list)	
 		return render_template("respond.html")
 	#else:
 	#	return redirect(url_for('connectdb'))
@@ -96,9 +86,6 @@ def respond():
 		#addr = request.form[]
 	return render_template("response.html")
 
-
-
-#signal.signal(signal.SIGINT, signal_handler)
 
 
 
@@ -183,3 +170,19 @@ while True:
 if __name__ == "__main__":
 	app.debug = True
 	app.run()
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
