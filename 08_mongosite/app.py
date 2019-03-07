@@ -17,7 +17,7 @@ https://www.govtrack.us/api/v2/role?current=true&role_type=senator
 I just edited it use text editor to format it in the format I want 
 then I just used mongoimport with --jsonArray attached to it
 """
-import json
+#import json
 import os
 from flask import Flask, render_template, request, redirect, url_for, session
 #from flask_pymongo import PyMongo
@@ -57,9 +57,13 @@ def main():
 		db = client['gov']
 		collection = db['senators']
 		print(collection)
-		session['addr'] = addr;
+		session['addr'] = addr
+		#print(type(collection))
+		#json_util.dumps(collection)
+		#print(type(collection))
+		session['collection'] = json_util.dumps(collection,default=json_util.default)
 		##########################
-		return redirect(url_for("connectdb",hello=collection))
+		return redirect(url_for("connectdb"))
 	else:
 		return render_template("home.html")
 
@@ -71,7 +75,8 @@ def connectdb():
 			#print(txt)
 			
 			#result = collection.find({"person.firstname":txt})
-	print(hello)
+	#json_util.dups(collection)
+	#session['collection'] = collection
 			#print(result)
 			#	pprint.pprint(post)
 			
