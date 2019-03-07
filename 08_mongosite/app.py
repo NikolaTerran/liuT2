@@ -44,6 +44,11 @@ import sys
 app = Flask(__name__)
 app.secret_key = os.urandom(32)
 
+class DataStore():
+	collection = None
+
+data = DataStore()
+
 @app.route('/', methods=['GET','POST'])
 def main():
 	if request.method == 'POST':
@@ -56,31 +61,32 @@ def main():
 		#my db and collection name
 		db = client['gov']
 		collection = db['senators']
+		data.collection = collection 
 		print(collection)
 		session['addr'] = addr
 		#print(type(collection))
 		#json_util.dumps(collection)
 		#print(type(collection))
-		session['collection'] = json_util.dumps(collection,default=json_util.default)
+		#session['collection'] = json_util.dumps(collection,default=json_util.default)
 		##########################
-		return redirect(url_for("connectdb"))
+		return render_template("request.html")
 	else:
 		return render_template("home.html")
 
 @app.route('/connect',methods=['GET','POST'])
 def connectdb():
-	#if request.method == 'POST':
-	#	if request.form['first'] is not None:
-			#txt = request.values.get("first")
+	if request.method == 'POST':
+		if request.form['first'] is not None:
+			txt = request.values.get("first")
 			#print(txt)
 			
-			#result = collection.find({"person.firstname":txt})
+			result = data.collection.find({"person.firstname":txt})
 	#json_util.dups(collection)
 	#session['collection'] = collection
 			#print(result)
 			#	pprint.pprint(post)
-			
-	return render_template("respond.html")
+		print(result)	
+		return render_template("respond.html")
 	#else:
 	#	return redirect(url_for('connectdb'))
 
