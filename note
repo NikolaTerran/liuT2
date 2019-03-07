@@ -1,5 +1,5 @@
 <vidio>
-<audio>
+ <audio>
 <canvas> <-- drawing area
 JS fxns an draw onto a canvas element <-- given an id
 only 2 attr: height and width <-- default to w:300 & h:150
