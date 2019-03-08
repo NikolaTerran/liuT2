@@ -1,4 +1,11 @@
 {
+ "meta": {
+  "limit": 100,
+  "offset": 0,
+  "total_count": 100
+ },
+ "objects": [
+  {
    "caucus": null,
    "congress_numbers": [
     114,
@@ -49,8 +56,7 @@
    "title": "Sen.",
    "title_long": "Senator",
    "website": "https://www.alexander.senate.gov/public"
-  }
-  
+  },
   {
    "caucus": null,
    "congress_numbers": [
@@ -102,8 +108,7 @@
    "title": "Sen.",
    "title_long": "Senator",
    "website": "https://www.collins.senate.gov"
-  }
-  
+  },
   {
    "caucus": null,
    "congress_numbers": [
@@ -155,8 +160,7 @@
    "title": "Sen.",
    "title_long": "Senator",
    "website": "https://www.cornyn.senate.gov"
-  }
-  
+  },
   {
    "caucus": null,
    "congress_numbers": [
@@ -208,8 +212,7 @@
    "title": "Sen.",
    "title_long": "Senator",
    "website": "https://www.durbin.senate.gov"
-  }
-  
+  },
   {
    "caucus": null,
    "congress_numbers": [
@@ -261,8 +264,7 @@
    "title": "Sen.",
    "title_long": "Senator",
    "website": "https://www.enzi.senate.gov"
-  }
-  
+  },
   {
    "caucus": null,
    "congress_numbers": [
@@ -314,8 +316,7 @@
    "title": "Sen.",
    "title_long": "Senator",
    "website": "https://www.lgraham.senate.gov/public"
-  }
-  
+  },
   {
    "caucus": null,
    "congress_numbers": [
@@ -367,8 +368,7 @@
    "title": "Sen.",
    "title_long": "Senator",
    "website": "https://www.inhofe.senate.gov"
-  }
-  
+  },
   {
    "caucus": null,
    "congress_numbers": [
@@ -420,8 +420,7 @@
    "title": "Sen.",
    "title_long": "Senator",
    "website": "https://www.mcconnell.senate.gov"
-  }
-  
+  },
   {
    "caucus": null,
    "congress_numbers": [
@@ -473,8 +472,7 @@
    "title": "Sen.",
    "title_long": "Senator",
    "website": "https://www.reed.senate.gov"
-  }
-  
+  },
   {
    "caucus": null,
    "congress_numbers": [
@@ -526,8 +524,7 @@
    "title": "Sen.",
    "title_long": "Senator",
    "website": "https://www.roberts.senate.gov"
-  }
-  
+  },
   {
    "caucus": null,
    "congress_numbers": [
@@ -578,8 +575,7 @@
    "title": "Sen.",
    "title_long": "Senator",
    "website": "https://www.capito.senate.gov"
-  }
-  
+  },
   {
    "caucus": null,
    "congress_numbers": [
@@ -629,8 +625,7 @@
    "title": "Sen.",
    "title_long": "Senator",
    "website": "https://www.markey.senate.gov"
-  }
-  
+  },
   {
    "caucus": null,
    "congress_numbers": [
@@ -682,8 +677,7 @@
    "title": "Sen.",
    "title_long": "Senator",
    "website": "https://www.tomudall.senate.gov"
-  }
-  
+  },
   {
    "caucus": null,
    "congress_numbers": [
@@ -734,8 +728,7 @@
    "title": "Sen.",
    "title_long": "Senator",
    "website": "https://www.cassidy.senate.gov"
-  }
-  
+  },
   {
    "caucus": null,
    "congress_numbers": [
@@ -786,8 +779,7 @@
    "title": "Sen.",
    "title_long": "Senator",
    "website": "https://www.peters.senate.gov"
-  }
-  
+  },
   {
    "caucus": null,
    "congress_numbers": [
@@ -839,8 +831,7 @@
    "title": "Sen.",
    "title_long": "Senator",
    "website": "https://www.warner.senate.gov"
-  }
-  
+  },
   {
    "caucus": null,
    "congress_numbers": [
@@ -891,8 +882,7 @@
    "title": "Sen.",
    "title_long": "Senator",
    "website": "https://www.risch.senate.gov"
-  }
-  
+  },
   {
    "caucus": null,
    "congress_numbers": [
@@ -944,8 +934,7 @@
    "title": "Sen.",
    "title_long": "Senator",
    "website": "https://www.shaheen.senate.gov"
-  }
-  
+  },
   {
    "caucus": null,
    "congress_numbers": [
@@ -997,8 +986,7 @@
    "title": "Sen.",
    "title_long": "Senator",
    "website": "https://www.merkley.senate.gov"
-  }
-  
+  },
   {
    "caucus": null,
    "congress_numbers": [
@@ -1050,8 +1038,7 @@
    "title": "Sen.",
    "title_long": "Senator",
    "website": "https://www.coons.senate.gov"
-  }
-  
+  },
   {
    "caucus": null,
    "congress_numbers": [
@@ -1102,8 +1089,7 @@
    "title": "Sen.",
    "title_long": "Senator",
    "website": "https://www.gardner.senate.gov"
-  }
-  
+  },
   {
    "caucus": null,
    "congress_numbers": [
@@ -1153,8 +1139,7 @@
    "title": "Sen.",
    "title_long": "Senator",
    "website": "https://www.cotton.senate.gov"
-  }
-  
+  },
   {
    "caucus": null,
    "congress_numbers": [
@@ -1205,8 +1190,7 @@
    "title": "Sen.",
    "title_long": "Senator",
    "website": "https://www.daines.senate.gov"
-  }
-  
+  },
   {
    "caucus": null,
    "congress_numbers": [
@@ -1257,8 +1241,7 @@
    "title": "Sen.",
    "title_long": "Senator",
    "website": "https://www.booker.senate.gov"
-  }
-  
+  },
   {
    "caucus": null,
    "congress_numbers": [
@@ -1308,8 +1291,7 @@
    "title": "Sen.",
    "title_long": "Senator",
    "website": "https://www.sullivan.senate.gov"
-  }
-  
+  },
   {
    "caucus": null,
    "congress_numbers": [
@@ -1359,8 +1341,7 @@
    "title": "Sen.",
    "title_long": "Senator",
    "website": "https://www.perdue.senate.gov"
-  }
-  
+  },
   {
    "caucus": null,
    "congress_numbers": [
@@ -1410,8 +1391,7 @@
    "title": "Sen.",
    "title_long": "Senator",
    "website": "https://www.ernst.senate.gov/public"
-  }
-  
+  },
   {
    "caucus": null,
    "congress_numbers": [
@@ -1461,8 +1441,7 @@
    "title": "Sen.",
    "title_long": "Senator",
    "website": "https://www.tillis.senate.gov/public"
-  }
-  
+  },
   {
    "caucus": null,
    "congress_numbers": [
@@ -1512,8 +1491,7 @@
    "title": "Sen.",
    "title_long": "Senator",
    "website": "https://www.rounds.senate.gov"
-  }
-  
+  },
   {
    "caucus": null,
    "congress_numbers": [
@@ -1563,8 +1541,7 @@
    "title": "Sen.",
    "title_long": "Senator",
    "website": "https://www.sasse.senate.gov/public"
-  }
-  
+  },
   {
    "caucus": null,
    "congress_numbers": [
@@ -1615,8 +1592,7 @@
    "title": "Sen.",
    "title_long": "Senator",
    "website": "https://www.crapo.senate.gov"
-  }
-  
+  },
   {
    "caucus": null,
    "congress_numbers": [
@@ -1668,8 +1644,7 @@
    "title": "Sen.",
    "title_long": "Senator",
    "website": "https://www.grassley.senate.gov"
-  }
-  
+  },
   {
    "caucus": null,
    "congress_numbers": [
@@ -1721,8 +1696,7 @@
    "title": "Sen.",
    "title_long": "Senator",
    "website": "https://www.leahy.senate.gov"
-  }
-  
+  },
   {
    "caucus": null,
    "congress_numbers": [
@@ -1774,8 +1748,7 @@
    "title": "Sen.",
    "title_long": "Senator",
    "website": "https://www.murkowski.senate.gov"
-  }
-  
+  },
   {
    "caucus": null,
    "congress_numbers": [
@@ -1827,8 +1800,7 @@
    "title": "Sen.",
    "title_long": "Senator",
    "website": "https://www.murray.senate.gov/public"
-  }
-  
+  },
   {
    "caucus": null,
    "congress_numbers": [
@@ -1879,8 +1851,7 @@
    "title": "Sen.",
    "title_long": "Senator",
    "website": "https://www.schumer.senate.gov"
-  }
-  
+  },
   {
    "caucus": null,
    "congress_numbers": [
@@ -1932,8 +1903,7 @@
    "title": "Sen.",
    "title_long": "Senator",
    "website": "https://www.shelby.senate.gov"
-  }
-  
+  },
   {
    "caucus": null,
    "congress_numbers": [
@@ -1985,8 +1955,7 @@
    "title": "Sen.",
    "title_long": "Senator",
    "website": "https://www.wyden.senate.gov"
-  }
-  
+  },
   {
    "caucus": null,
    "congress_numbers": [
@@ -2038,8 +2007,7 @@
    "title": "Sen.",
    "title_long": "Senator",
    "website": "https://www.blunt.senate.gov"
-  }
-  
+  },
   {
    "caucus": null,
    "congress_numbers": [
@@ -2091,8 +2059,7 @@
    "title": "Sen.",
    "title_long": "Senator",
    "website": "https://www.boozman.senate.gov/public"
-  }
-  
+  },
   {
    "caucus": null,
    "congress_numbers": [
@@ -2144,8 +2111,7 @@
    "title": "Sen.",
    "title_long": "Senator",
    "website": "https://www.burr.senate.gov"
-  }
-  
+  },
   {
    "caucus": null,
    "congress_numbers": [
@@ -2197,8 +2163,7 @@
    "title": "Sen.",
    "title_long": "Senator",
    "website": "https://www.isakson.senate.gov"
-  }
-  
+  },
   {
    "caucus": null,
    "congress_numbers": [
@@ -2250,8 +2215,7 @@
    "title": "Sen.",
    "title_long": "Senator",
    "website": "https://www.moran.senate.gov"
-  }
-  
+  },
   {
    "caucus": null,
    "congress_numbers": [
@@ -2302,8 +2266,7 @@
    "title": "Sen.",
    "title_long": "Senator",
    "website": "https://www.portman.senate.gov"
-  }
-  
+  },
   {
    "caucus": null,
    "congress_numbers": [
@@ -2355,8 +2318,7 @@
    "title": "Sen.",
    "title_long": "Senator",
    "website": "https://www.toomey.senate.gov"
-  }
-  
+  },
   {
    "caucus": null,
    "congress_numbers": [
@@ -2407,8 +2369,7 @@
    "title": "Sen.",
    "title_long": "Senator",
    "website": "https://www.vanhollen.senate.gov"
-  }
-  
+  },
   {
    "caucus": null,
    "congress_numbers": [
@@ -2460,8 +2421,7 @@
    "title": "Sen.",
    "title_long": "Senator",
    "website": "https://www.thune.senate.gov"
-  }
-  
+  },
   {
    "caucus": null,
    "congress_numbers": [
@@ -2513,8 +2473,7 @@
    "title": "Sen.",
    "title_long": "Senator",
    "website": "https://www.bennet.senate.gov/public"
-  }
-  
+  },
   {
    "caucus": null,
    "congress_numbers": [
@@ -2565,8 +2524,7 @@
    "title": "Sen.",
    "title_long": "Senator",
    "website": "https://www.young.senate.gov"
-  }
-  
+  },
   {
    "caucus": null,
    "congress_numbers": [
@@ -2616,8 +2574,7 @@
    "title": "Sen.",
    "title_long": "Senator",
    "website": "https://www.lankford.senate.gov"
-  }
-  
+  },
   {
    "caucus": null,
    "congress_numbers": [
@@ -2669,8 +2626,7 @@
    "title": "Sen.",
    "title_long": "Senator",
    "website": "https://www.scott.senate.gov"
-  }
-  
+  },
   {
    "caucus": null,
    "congress_numbers": [
@@ -2722,8 +2678,7 @@
    "title": "Sen.",
    "title_long": "Senator",
    "website": "https://www.blumenthal.senate.gov"
-  }
-  
+  },
   {
    "caucus": null,
    "congress_numbers": [
@@ -2775,8 +2730,7 @@
    "title": "Sen.",
    "title_long": "Senator",
    "website": "https://www.rubio.senate.gov"
-  }
-  
+  },
   {
    "caucus": null,
    "congress_numbers": [
@@ -2828,8 +2782,7 @@
    "title": "Sen.",
    "title_long": "Senator",
    "website": "https://www.paul.senate.gov"
-  }
-  
+  },
   {
    "caucus": null,
    "congress_numbers": [
@@ -2881,8 +2834,7 @@
    "title": "Sen.",
    "title_long": "Senator",
    "website": "https://www.hoeven.senate.gov"
-  }
-  
+  },
   {
    "caucus": null,
    "congress_numbers": [
@@ -2933,8 +2885,7 @@
    "title": "Sen.",
    "title_long": "Senator",
    "website": "https://www.lee.senate.gov/public"
-  }
-  
+  },
   {
    "caucus": null,
    "congress_numbers": [
@@ -2986,8 +2937,7 @@
    "title": "Sen.",
    "title_long": "Senator",
    "website": "https://www.ronjohnson.senate.gov"
-  }
-  
+  },
   {
    "caucus": null,
    "congress_numbers": [
@@ -3038,8 +2988,7 @@
    "title": "Sen.",
    "title_long": "Senator",
    "website": "https://www.schatz.senate.gov"
-  }
-  
+  },
   {
    "caucus": null,
    "congress_numbers": [
@@ -3089,8 +3038,7 @@
    "title": "Sen.",
    "title_long": "Senator",
    "website": "https://www.duckworth.senate.gov"
-  }
-  
+  },
   {
    "caucus": null,
    "congress_numbers": [
@@ -3140,8 +3088,7 @@
    "title": "Sen.",
    "title_long": "Senator",
    "website": "https://www.harris.senate.gov"
-  }
-  
+  },
   {
    "caucus": null,
    "congress_numbers": [
@@ -3191,8 +3138,7 @@
    "title": "Sen.",
    "title_long": "Senator",
    "website": "https://www.kennedy.senate.gov/public"
-  }
-  
+  },
   {
    "caucus": null,
    "congress_numbers": [
@@ -3242,8 +3188,7 @@
    "title": "Sen.",
    "title_long": "Senator",
    "website": "https://www.hassan.senate.gov"
-  }
-  
+  },
   {
    "caucus": null,
    "congress_numbers": [
@@ -3293,8 +3238,7 @@
    "title": "Sen.",
    "title_long": "Senator",
    "website": "https://www.cortezmasto.senate.gov"
-  }
-  
+  },
   {
    "caucus": null,
    "congress_numbers": [
@@ -3343,8 +3287,7 @@
    "title": "Sen.",
    "title_long": "Senator",
    "website": "https://www.jones.senate.gov"
-  }
-  
+  },
   {
    "caucus": null,
    "congress_numbers": [
@@ -3393,8 +3336,7 @@
    "title": "Sen.",
    "title_long": "Senator",
    "website": "https://www.smith.senate.gov"
-  }
-  
+  },
   {
    "caucus": null,
    "congress_numbers": [
@@ -3443,8 +3385,7 @@
    "title": "Sen.",
    "title_long": "Senator",
    "website": "https://www.hydesmith.senate.gov"
-  }
-  
+  },
   {
    "caucus": null,
    "congress_numbers": [
@@ -3495,8 +3436,7 @@
    "title": "Sen.",
    "title_long": "Senator",
    "website": "https://www.cantwell.senate.gov"
-  }
-  
+  },
   {
    "caucus": null,
    "congress_numbers": [
@@ -3598,8 +3538,7 @@
    "title": "Sen.",
    "title_long": "Senator",
    "website": "https://www.feinstein.senate.gov"
-  }
-  
+  },
   {
    "caucus": null,
    "congress_numbers": [
@@ -3650,8 +3589,7 @@
    "title": "Sen.",
    "title_long": "Senator",
    "website": "https://www.stabenow.senate.gov"
-  }
-  
+  },
   {
    "caucus": null,
    "congress_numbers": [
@@ -3702,8 +3640,7 @@
    "title": "Sen.",
    "title_long": "Senator",
    "website": "https://www.baldwin.senate.gov"
-  }
-  
+  },
   {
    "caucus": null,
    "congress_numbers": [
@@ -3753,8 +3690,7 @@
    "title": "Sen.",
    "title_long": "Senator",
    "website": "https://www.blackburn.senate.gov"
-  }
-  
+  },
   {
    "caucus": null,
    "congress_numbers": [
@@ -3805,8 +3741,7 @@
    "title": "Sen.",
    "title_long": "Senator",
    "website": "https://www.brown.senate.gov"
-  }
-  
+  },
   {
    "caucus": null,
    "congress_numbers": [
@@ -3857,8 +3792,7 @@
    "title": "Sen.",
    "title_long": "Senator",
    "website": "https://www.cardin.senate.gov"
-  }
-  
+  },
   {
    "caucus": null,
    "congress_numbers": [
@@ -3909,8 +3843,7 @@
    "title": "Sen.",
    "title_long": "Senator",
    "website": "https://www.menendez.senate.gov"
-  }
-  
+  },
   {
    "caucus": "Democrat",
    "congress_numbers": [
@@ -3961,8 +3894,7 @@
    "title": "Sen.",
    "title_long": "Senator",
    "website": "https://www.sanders.senate.gov"
-  }
-  
+  },
   {
    "caucus": null,
    "congress_numbers": [
@@ -4012,8 +3944,7 @@
    "title": "Sen.",
    "title_long": "Senator",
    "website": "https://www.wicker.senate.gov"
-  }
-  
+  },
   {
    "caucus": null,
    "congress_numbers": [
@@ -4064,8 +3995,7 @@
    "title": "Sen.",
    "title_long": "Senator",
    "website": "https://www.murphy.senate.gov"
-  }
-  
+  },
   {
    "caucus": null,
    "congress_numbers": [
@@ -4116,8 +4046,7 @@
    "title": "Sen.",
    "title_long": "Senator",
    "website": "https://www.hirono.senate.gov"
-  }
-  
+  },
   {
    "caucus": null,
    "congress_numbers": [
@@ -4168,8 +4097,7 @@
    "title": "Sen.",
    "title_long": "Senator",
    "website": "https://www.gillibrand.senate.gov"
-  }
-  
+  },
   {
    "caucus": null,
    "congress_numbers": [
@@ -4219,8 +4147,7 @@
    "title": "Sen.",
    "title_long": "Senator",
    "website": "https://www.klobuchar.senate.gov"
-  }
-  
+  },
   {
    "caucus": null,
    "congress_numbers": [
@@ -4271,8 +4198,7 @@
    "title": "Sen.",
    "title_long": "Senator",
    "website": "https://www.tester.senate.gov"
-  }
-  
+  },
   {
    "caucus": null,
    "congress_numbers": [
@@ -4323,8 +4249,7 @@
    "title": "Sen.",
    "title_long": "Senator",
    "website": "https://www.casey.senate.gov"
-  }
-  
+  },
   {
    "caucus": null,
    "congress_numbers": [
@@ -4375,8 +4300,7 @@
    "title": "Sen.",
    "title_long": "Senator",
    "website": "https://www.whitehouse.senate.gov"
-  }
-  
+  },
   {
    "caucus": null,
    "congress_numbers": [
@@ -4427,7 +4351,7 @@
    "title": "Sen.",
    "title_long": "Senator",
    "website": "https://www.barrasso.senate.gov"
-  }
+  },
   {
    "caucus": null,
    "congress_numbers": [
@@ -4477,7 +4401,7 @@
    "title": "Sen.",
    "title_long": "Senator",
    "website": "https://www.heinrich.senate.gov"
-  }
+  },
   {
    "caucus": null,
    "congress_numbers": [
@@ -4528,7 +4452,7 @@
    "title": "Sen.",
    "title_long": "Senator",
    "website": "https://www.manchin.senate.gov"
-  }
+  },
   {
    "caucus": null,
    "congress_numbers": [
@@ -4578,7 +4502,7 @@
    "title": "Sen.",
    "title_long": "Senator",
    "website": "https://www.sinema.senate.gov"
-  }
+  },
   {
    "caucus": null,
    "congress_numbers": [
@@ -4629,7 +4553,7 @@
    "title": "Sen.",
    "title_long": "Senator",
    "website": "https://www.warren.senate.gov"
-  }
+  },
   {
    "caucus": "Democrat",
    "congress_numbers": [
@@ -4680,7 +4604,7 @@
    "title": "Sen.",
    "title_long": "Senator",
    "website": "https://www.king.senate.gov"
-  }
+  },
   {
    "caucus": null,
    "congress_numbers": [
@@ -4730,7 +4654,7 @@
    "title": "Sen.",
    "title_long": "Senator",
    "website": "https://www.senate.gov/senators/116thCongress/CramerKevin.htm"
-  }
+  },
   {
    "caucus": null,
    "congress_numbers": [
@@ -4781,7 +4705,7 @@
    "title": "Sen.",
    "title_long": "Senator",
    "website": "https://www.fischer.senate.gov"
-  }
+  },
   {
    "caucus": null,
    "congress_numbers": [
@@ -4831,7 +4755,7 @@
    "title": "Sen.",
    "title_long": "Senator",
    "website": "https://www.cruz.senate.gov"
-  }
+  },
   {
    "caucus": null,
    "congress_numbers": [
@@ -4882,7 +4806,7 @@
    "title": "Sen.",
    "title_long": "Senator",
    "website": "https://www.kaine.senate.gov"
-  }
+  },
   {
    "caucus": null,
    "congress_numbers": [
@@ -4930,7 +4854,7 @@
    "title": "Sen.",
    "title_long": "Senator",
    "website": "https://www.mcsally.senate.gov"
-  }
+  },
   {
    "caucus": null,
    "congress_numbers": [
@@ -4980,7 +4904,7 @@
    "title": "Sen.",
    "title_long": "Senator",
    "website": "https://www.rosen.senate.gov"
-  }
+  },
   {
    "caucus": null,
    "congress_numbers": [
@@ -5030,7 +4954,7 @@
    "title": "Sen.",
    "title_long": "Senator",
    "website": "https://www.senate.gov/senators/116thCongress/ScottRick.htm"
-  }
+  },
   {
    "caucus": null,
    "congress_numbers": [
@@ -5080,7 +5004,7 @@
    "title": "Sen.",
    "title_long": "Senator",
    "website": "https://www.braun.senate.gov"
-  }
+  },
   {
    "caucus": null,
    "congress_numbers": [
@@ -5130,7 +5054,7 @@
    "title": "Sen.",
    "title_long": "Senator",
    "website": "https://www.senate.gov/senators/116thCongress/HawleyJosh.htm"
-  }
+  },
   {
    "caucus": null,
    "congress_numbers": [
@@ -5181,4 +5105,5 @@
    "title_long": "Senator",
    "website": "https://www.romney.senate.gov"
   }
-
+ ]
+}

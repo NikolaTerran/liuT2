@@ -6,8 +6,6 @@
 """
 dataset = list of current US senators
 https://www.govtrack.us/api/v2/role?current=true&role_type=senator
-I just edited it use text editor to format it in the format I want 
-then I just used mongoimport with --jsonArray attached to it
 """
 
 import os
@@ -21,7 +19,8 @@ app = Flask(__name__)
 app.secret_key = os.urandom(32)
 
 # mongodb constants
-DEFAULTADDR = "mud.ddns.net"
+DEFAULTADDR = "178.128.157.14"
+# DEFAULTADDR = "mud.ddns.net"
 DBNAME = "gov"
 COLNAME = "senators"
 
@@ -31,10 +30,6 @@ def main():
 		addr = request.form['ip']
 		if len(addr) == 0:
 			addr = DEFAULTADDR
-		client = MongoClient(addr)
-
-		db = client[DBNAME]
-		collection = db[COLNAME]
 		session['addr'] = addr
 		return render_template("request.html")
 	else:
@@ -74,14 +69,21 @@ def respond():
 		#addr = request.form[]
 	return render_template("response.html")
 
-def destroy_db():
+def destroy_db(addr):
 	# TODO: helper function to drop a mongodb db at a given IP
-	pass
+	print("Destroying database at " + addr)
+	client = MongoClient(addr, serverSelectionTimeoutMS=3000)
+	client.drop_database(DBNAME)
 
-def create_db():
-	# TODO: helper function to create a mongodb db at a given IP
-	pass
+def create_db(addr):
+	if destroy_db(addr) == False:
+		return False
+	print("Creating database at " + addr)
+	# with open('senator.json', 'r') as f:
+		# pprint.pprint(json_util.loads(f.read()))
+	# return False
 
 if __name__ == "__main__":
+	create_db(DEFAULTADDR)
 	app.debug = True
 	app.run()
