@@ -4,12 +4,15 @@
 
 </head>
     <body>
-        <form action="/" method="POST">
+        <form action="/config" method="POST">
 			<h2>Config</h2>
             <p>
                 If you wish to host the database on a different IP address, enter it here.
                 Leave it empty to use the default ("mud.ddns.net")
             </p>
+			<p>
+				Current IP: {{ip}}
+			</p>
 			<input type="text" name="ip">
 			<h4>e.g. "mud.ddns.net:27017"</h4>
             <button type="submit">Continue</button>

@@ -51,9 +51,11 @@ def config():
 		db = client[DBNAME]
 		collection = db[COLNAME]
 		session['addr'] = addr
-		return render_template("config.html")
+		return render_template("config.html", ip=addr)
 	else:
-		return render_template("config.html")
+		if 'addr' not in session:
+			session['addr'] = DEFAULTADDR
+		return render_template("config.html", ip=session['addr'])
 
 @app.route('/connect',methods=['GET','POST'])
 def connectdb():
