@@ -23,16 +23,9 @@ DEFAULTADDR = "178.128.157.14"
 DBNAME = "gov"
 COLNAME = "senators"
 
-@app.route('/', methods=['GET','POST'])
+@app.route('/', methods=['GET'])
 def main():
-	if request.method == 'POST':
-		addr = request.form['ip']
-		if len(addr) == 0:
-			addr = DEFAULTADDR
-		session['addr'] = addr
-		return render_template("request.html")
-	else:
-		return render_template("home.html")
+	return render_template("home.html")
 
 @app.route('/config', methods=['GET','POST'])
 def config():
@@ -54,21 +47,20 @@ def config():
 		create_db(addr)
 	return render_template("config.html", ip=session['addr'])
 
-@app.route('/connect',methods=['GET','POST'])
+@app.route('/connect')
 def connectdb():
-	if request.method == 'POST':
-		if request.form['first'] is not None:
-			txt = request.values.get("first")
-			#print(txt)
-			list = []
-			for senator in data.collection.find({"person.firstname":txt}):
-				pprint.pprint(senator)
-		return render_template("respond.html")
+	if 'first' in request.form:
+		txt = request.values.get("first")
+		#print(txt)
+		list = []
+		for senator in data.collection.find({"person.firstname":txt}):
+			pprint.pprint(senator)
+	else:
+		return redirect(url_for("main"))
+	return render_template("respond.html")
 
 @app.route('/respond')
 def respond():
-	#if(request.method == "POST"):
-		#addr = request.form[]
 	return render_template("response.html")
 
 def destroy_db(addr):
@@ -87,5 +79,4 @@ if __name__ == "__main__":
 	destroy_db(DEFAULTADDR)
 	create_db(DEFAULTADDR)
 	app.debug = True
-	# use_reloader prevents create_db from executing twice
-	app.run(use_reloader=False)
+	app.run()
