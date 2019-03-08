@@ -36,6 +36,8 @@ def main():
 
 @app.route('/config', methods=['GET','POST'])
 def config():
+	if 'addr' not in session:
+		session['addr'] = DEFAULTADDR
 	if request.method == 'POST':
 		destroy_db(session['addr'])
 
@@ -50,12 +52,7 @@ def config():
 
 		# Probably should handle errors
 		create_db(addr)
-			
-		return render_template("config.html", ip=addr)
-	else:
-		if 'addr' not in session:
-			session['addr'] = DEFAULTADDR
-		return render_template("config.html", ip=session['addr'])
+	return render_template("config.html", ip=session['addr'])
 
 @app.route('/connect',methods=['GET','POST'])
 def connectdb():
