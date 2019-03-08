@@ -31,6 +31,8 @@ def main():
 
 @app.route('/config', methods=['GET','POST'])
 def config():
+	if 'addr' not in session:
+		session['addr'] = DEFAULTADDR
 	if request.method == 'POST':
 		destroy_db(session['addr'])
 
@@ -49,6 +51,8 @@ def config():
 
 @app.route('/search')
 def search():
+	if 'addr' not in session:
+		session['addr'] = DEFAULTADDR
 	if request.args['first']:
 		firstname = request.values.get("first")
 		list = []
