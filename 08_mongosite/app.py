@@ -25,12 +25,12 @@ COLNAME = "senators"
 
 @app.route('/', methods=['GET'])
 def main():
+	if 'addr' not in session:
+		session['addr'] = DEFAULTADDR
 	return render_template("home.html")
 
 @app.route('/config', methods=['GET','POST'])
 def config():
-	if 'addr' not in session:
-		session['addr'] = DEFAULTADDR
 	if request.method == 'POST':
 		destroy_db(session['addr'])
 
@@ -47,21 +47,17 @@ def config():
 		create_db(addr)
 	return render_template("config.html", ip=session['addr'])
 
-@app.route('/connect')
-def connectdb():
-	if 'first' in request.form:
-		txt = request.values.get("first")
-		#print(txt)
+@app.route('/search')
+def search():
+	if request.args['first']:
+		firstname = request.values.get("first")
 		list = []
-		for senator in data.collection.find({"person.firstname":txt}):
-			pprint.pprint(senator)
+		client = MongoClient(session['addr'], serverSelectionTimeoutMS=3000)
+		collection = client[DBNAME][COLNAME]
+		senators = collection.find({"person.firstname": firstname})
+		return render_template("search.html", queryarg=firstname, query=senators)
 	else:
 		return redirect(url_for("main"))
-	return render_template("respond.html")
-
-@app.route('/respond')
-def respond():
-	return render_template("response.html")
 
 def destroy_db(addr):
 	print("Destroying database at " + addr)
