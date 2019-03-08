@@ -18,12 +18,12 @@ app = Flask(__name__)
 app.secret_key = os.urandom(32)
 
 # mongodb constants
-DEFAULTADDR = "178.128.157.14"
-# DEFAULTADDR = "mud.ddns.net"
+#DEFAULTADDR = "178.128.157.14"
+DEFAULTADDR = "mud.ddns.net"
 DBNAME = "gov"
 COLNAME = "senators"
 
-@app.route('/', methods=['GET'])
+@app.route('/', methods=['GET','POST'])
 def main():
 	if 'addr' not in session:
 		session['addr'] = DEFAULTADDR
@@ -56,7 +56,7 @@ def search():
 	if request.args['first']:
 		firstname = request.values.get("first")
 		list = []
-		client = MongoClient(session['addr'], serverSelectionTimeoutMS=3000)
+		client = MongoClient(session['addr'])
 		collection = client[DBNAME][COLNAME]
 		senators = collection.find({"person.firstname": firstname})
 		return render_template("search.html", queryarg=firstname, query=senators)
@@ -65,11 +65,11 @@ def search():
 
 def destroy_db(addr):
 	print("Destroying database at " + addr)
-	client = MongoClient(addr, serverSelectionTimeoutMS=3000)
+	client = MongoClient(addr)
 	client.drop_database(DBNAME)
 
 def create_db(addr):
-	client = MongoClient(addr, serverSelectionTimeoutMS=3000)
+	client = MongoClient(addr)
 	collection = client[DBNAME][COLNAME]
 	print("Creating database at " + addr)
 	with open('senator.json', 'r') as f:
