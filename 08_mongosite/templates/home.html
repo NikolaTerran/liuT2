@@ -1,24 +1,50 @@
 <!DOCTYPE=html>
 <html>
 <head>
-
-</head>
-<body>
-		<form action="/" method="POST">
-			<h3>enter the ip</h3>
-			<input type="text" name="ip">
-
-			<h3>e.g. "mud.ddns.net:27017"</h3>
-			<h3>enter the db name</h3>
-			<input type="text" name="db">
-
-			<h3>e.g. "gov"</h3>
-			<h3>enter the collection name</h3>
-			<input type="text" name="collection">
+	<!--
+	<script>
+	var collection = {{col}};
+	</script>
+	-->
+	</head>
+	<body>
+		<h1>CURRENT SENATOR DATABASE</h1>
+        <a href="/config">Change DB Host IP</a>
+		<form action="/connect" method="POST">
+			<h3>Search senators by firstname</h3>
+			<input type="text" name="first">
+			<input id="h1" type="hidden" name="col"/>
+			<h3>e.g. "John"</h3>
+				<button id="b1" type="submit">
+	    	        submit
+				</button>
+			</form>
+		<form action="/connect" method="POST">
+			<h3>Search senators by lastname</h3>
+			<input type="text" name="last">
+			<h3>e.g. "Schumer"</h3>
 				<button type="submit">
 	    	        submit
 				</button>
-			<h3>e.g. "senators"</h3>
+		</form>
+
+		<form action="/connect" method="POST">
+			<h3>Search senators by cspnid</h3>
+			<input type="number" name="cspn">
+			<h3>e.g. "1020045"</h3>
+				<button type="submit">
+	    	        submit
+				</button>
 		</form>
 	</body>
+	<footer>
+		<!--
+		<script>
+    		var b = document.getElementById("b1");
+    		b.addEventListener(function(){
+    			document.getElementById(h1).value = collection;
+
+    		});
+		</script>-->
+	</footer>
 </html>
