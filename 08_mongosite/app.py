@@ -1,7 +1,7 @@
-#Team Raspberry pi
-#Tianrun Liu
-#
-#
+# Team Raspberry pi - Tianrun Liu, Brian Lee, Damian Wasilewicz
+# SoftDev2 pd6
+# K08 -- Ay Mon, Go Git It From Yer Flask
+# 2019-03-07
 
 """
 dataset = list of current US senators
