@@ -1,0 +1,12 @@
+<!DOCTYPE=html>
+<html>
+<head>
+	<body>
+		<h1>Senators with first name {{ queryarg }}</h1>
+		{% for q in query %}
+ 		<li>{{ q['person']['name']}}: <a href={{ q['person']['link'] }}>Link to their site</a></li>
+		{% endfor %}
+		<br>
+		<a href="/">Go back</a>
+	</body>
+</head>

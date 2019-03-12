@@ -1,0 +1,22 @@
+<!DOCTYPE=html>
+<html>
+<head>
+
+</head>
+    <body>
+        <form action="/config" method="POST">
+			<h2>Config</h2>
+            <p>
+                If you wish to host the database on a different IP address, enter it here.
+                Leave it empty to use the default ("178.128.157.14")
+            </p>
+			<p>
+				Current IP: {{ip}}
+			</p>
+			<input type="text" name="ip">
+			<br>
+            <button type="submit">Continue</button>
+			<a href="/">Go back</a>
+		</form>
+	</body>
+</html>
