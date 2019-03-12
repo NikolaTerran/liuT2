@@ -1,0 +1,63 @@
+XML (eXtensible Markup Language):
+* meta-language: use it to create other languages
+* degines a set of rules for encoding data
+  in a format which is both
+    human-readable and machine-readable.
+* not a formatting language (ie HEML, GHFMD))
+* allows you to define a file type or data type
+
+
+* framework for creating markup-based grammars
+* uses some syntactic standards of HTML
+  (tags, attributes)
+
+* emphasizes organizing and representing data
+  (instead of redering/displayingit)
+
+* an XML namespace is defined by the tags and
+  attributes associated with a specific XML language
+
+(there are Many existing XML namespaces)
+  E.g., .docx, RSS, MathML, ..)
+
+
+RASTER image encoding:
+
+Latin: rastrum -- "rake"
+CRT
+
+raster encoding: bit-by-bit specification of an image
+(even if compressed, a la PNG, JPEG, GIF, etc..,)
+
+PROs?
+CONs?
+
+
+SVG: Scalable Vector Graphics
+* vector image format
+* XML -based
+* an SVG img and its actions are defined 
+  in XML test files
+
+SVG;
+Vector graphics are images not represented as a 2D grid
+of pixels (raster) but instead as a 
+list of drawing commands (eg: line, circle, rectangle, curve,
+
++ Biggest advantage to vector graphics is that they are 
+  scalable to any size without resulting
+
+<svg> element is designed to store SVG code (ie, SVG XML elements)
+
+xmlns; Attribute that identifies the namespace for the specific XML 
+language being used.
+
+eg,
+<svg xmlns="http://www.w3.org/2000/svg">
+	SVG CODE HERE
+</svg>
+
+N: in html file...
+
+
+  
