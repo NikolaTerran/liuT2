@@ -16,8 +16,9 @@ function draw(event){
 	var dot = document.createElementNS("http://www.w3.org/2000/svg","circle");
 	dot.setAttribute("cx",event.offsetX);
 	dot.setAttribute("cy",event.offsetY);
-	dot.setAttribute("r",5);
+	dot.setAttribute("r",10);
 	dot.setAttribute("fill","red");
+	dot.addEventListener("click",function(){dot.setAttribute("fill","yellow");});
 	pic.appendChild(dot);
 	if(x0 == 10110){
 		x0 = event.offsetX;
@@ -35,6 +36,11 @@ function draw(event){
 	}
 }
 
+function draw2(event){
+	
+	
+}
+
 var b = document.getElementById("b");
 b.addEventListener("click",clear);
 
@@ -42,6 +48,9 @@ function clear(event){
 	while(pic.lastChild){
 		pic.removeChild(pic.lastChild);
 	}
+	x0 = 10110;
+    y0 = 10110;
+
 }
 //pic.appendChild(c);
 
