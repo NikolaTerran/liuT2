@@ -13,7 +13,8 @@ var x0 = 10110;
 var y0 = 10110;
 
 function draw(event){
-	
+	console.log(event.offsetX);
+	console.log(event.offsetY);
 	var dot = document.createElementNS("http://www.w3.org/2000/svg","circle");
 	dot.setAttribute("cx",event.offsetX);
 	dot.setAttribute("cy",event.offsetY);
@@ -30,10 +31,10 @@ function draw(event){
                  dot.setAttribute("fill","green");
                  dot.addEventListener("click",function(){
 			pic.removeChild(this);
-			dot.setAttribute("fill","red");
-			dot.setAttribute("cx",(Math.random() * 500));
-			dot.setAttribute("cy",(Math.random() * 500));
-			pic.addEventListener('click',draw);
+			//dot.setAttribute("fill","red");
+			//dot.setAttribute("cx",(Math.random() * 500));
+			//dot.setAttribute("cy",(Math.random() * 500));
+			//pic.addEventListener('click',draw);
                  });
         });
                                                         

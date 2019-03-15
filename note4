@@ -1,0 +1,17 @@
+Event Propagation
+1. An element intercepts an event
+2. Browser collects DOM node path of the event from
+   the starting element to the root
+3. Capture: event propagates down the path from step 2
+4. Bubble: event propagates up the path from step 2
+
+3.stopPropagation();
+	cancel event propagation
+
+this
+has different meanings depending on the JS context from which it is being used:
+* in a JS object, this refers to calling object
+* in an event listener, this refers to currently triggered elemnt
+
+.target
+ returns element that began the event propagation chain
