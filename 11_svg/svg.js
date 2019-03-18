@@ -12,6 +12,9 @@ pic.addEventListener("click",draw,'true');
 var x0 = 10110;
 var y0 = 10110;
 
+var num = 0;
+
+
 function draw2(event){
 	pic.removeChild(pic.lastChild);
 	this.setAttribute("fill","green");
@@ -34,8 +37,11 @@ function draw3(event){
 	this.addEventListener("click",draw2);
 }
 
+
+
 function draw(event){
 	var dot = document.createElementNS("http://www.w3.org/2000/svg","circle");
+	dot.setAttribute("id",num);
 	dot.setAttribute("cx",event.offsetX);
 	dot.setAttribute("cy",event.offsetY);
 	dot.setAttribute("r",10);
@@ -43,6 +49,7 @@ function draw(event){
 	pic.appendChild(dot);
 	dot.addEventListener("click",draw2);
 
+	num++;
 /*	dot.addEventListener("mouseover",function(){
 		pic.removeEventListener('click',draw);
 	});
@@ -92,22 +99,29 @@ function clear(event){
 	}
 	x0 = 10110;
     y0 = 10110;
-
+	num = 0;
 }
 
 
 
 var id;
 
+var m = document.getElementById("m");
+m.addEventListener("click",move);
+
 function move(){
 		cancelAnimationFrame(id);
-		
-		for(var i = 0; i < pic.unmElements; i++){
-			var element = pic.getElementAt(i);
-			element.setAttribute("cx",element.getAttribute("cx") + 1);
+		//console.log(pic.numElements);
+		for(var i = 0; i < num; i++){
+			var element = pic.getElementById(i.toString());
+			var ok = parseInt(element.getAttribute("cx")) + 1;
+			element.setAttribute("cx",ok);
 			console.log(element.getAttribute("cx"));
+			if(parseInt(element.getAttribute("cx")) > 500){
+				pic.removeChild(element);
+			}
 		}
-		id = requestAnimationFrame(dvd_ani);
+		id = requestAnimationFrame(move);
 }
 
 
