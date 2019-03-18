@@ -12,21 +12,44 @@ pic.addEventListener("click",draw,'true');
 var x0 = 10110;
 var y0 = 10110;
 
+function draw2(event){
+	pic.removeChild(pic.lastChild);
+	this.setAttribute("fill","green");
+	this.removeEventListener("click",draw2);
+	this.addEventListener("click",draw3);
+}
+
+function draw3(event){
+	pic.removeChild(pic.lastChild);
+	this.setAttribute("fill","red");
+	var rx = Math.random() * 500;
+	var ry = Math.random() * 500;
+	
+	console.log(rx);
+	console.log(ry);
+	
+	this.setAttribute("cx",rx);
+	this.setAttribute("cy",ry);
+	this.removeEventListener("click",draw3);
+	this.addEventListener("click",draw2);
+}
+
 function draw(event){
-	console.log(event.offsetX);
-	console.log(event.offsetY);
 	var dot = document.createElementNS("http://www.w3.org/2000/svg","circle");
 	dot.setAttribute("cx",event.offsetX);
 	dot.setAttribute("cy",event.offsetY);
 	dot.setAttribute("r",10);
 	dot.setAttribute("fill","red");
 	pic.appendChild(dot);
+	dot.addEventListener("click",draw2);
+
 /*	dot.addEventListener("mouseover",function(){
 		pic.removeEventListener('click',draw);
 	});
 	dot.addEventListener("mouseout",function(){
 		pic.addEventListener('click',draw);
 	}); */
+	/*
         dot.addEventListener("click",function(){
                  dot.setAttribute("fill","green");
                  pic.removeChild(pic.lastChild);
@@ -59,10 +82,6 @@ function draw(event){
 	*/
 }
 
-function draw2(event){
-	
-	
-}
 
 var b = document.getElementById("b");
 b.addEventListener("click",clear);
@@ -75,7 +94,6 @@ function clear(event){
     y0 = 10110;
 
 }
-//pic.appendChild(c);
 
 
 
@@ -83,30 +101,14 @@ var id;
 
 function move(){
 		cancelAnimationFrame(id);
-		for(var i = 0; i < 
-		if(cur_x + border_x >= anime.width){
-			x_move = -1;
-		}
 		
-		if(cur_x <= 0){
-			x_move = 1;
+		for(var i = 0; i < pic.unmElements; i++){
+			var element = pic.getElementAt(i);
+			element.setAttribute("cx",element.getAttribute("cx") + 1);
+			console.log(element.getAttribute("cx"));
 		}
-		
-		if(cur_y + border_y >= anime.height){
-			y_move = -1;
-		}
-		
-		if(cur_y + 50 <= 0){
-			y_move = 1;
-		}
-		
-		ani_con.drawImage(drawing,cur_x,cur_y);
-		cur_x += x_move;
-		cur_y += y_move;
 		id = requestAnimationFrame(dvd_ani);
 }
-
-
 
 
 
