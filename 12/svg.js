@@ -20,7 +20,6 @@ function draw2(event){
 	this.setAttribute("fill","green");
 	this.removeEventListener("click",draw2);
 	this.addEventListener("click",draw3);
-	num--;
 }
 
 function draw3(event){

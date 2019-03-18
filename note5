@@ -1,0 +1,20 @@
+* a la jquery
+* concisify selection of DOM elements 
+* eg.some D3 selector functions:
+
+d3.select( IDENTIFIER );
+	returns first element matching
+
+so why d3?
+	after selecting an element, yu can set various attributes: style, 
+	txt. listeners, etc,.
+d3.select("body").
+
+
+d3.selectAll("p")
+	.style("font-size",
+	function(){
+		return Math.floor(Math.random() * 15)
+		 + "px"
+		 }
+		);
