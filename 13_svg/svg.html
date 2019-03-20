@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head> <title> SVG Demo </title>
+		<style>
+		.chart div{
+			font: 10px sans-serif;
+			background-color: steelblue;
+			text-align: right;
+			padding: 3px;
+			margin: 1px;
+			color: white;
+		}
+		</style>
+	
+	
+	 </head>
+	<body>
+	<div class="chart">
+		<div style="width: 40px;">4</div>
+		<div style="width: 80px;">8</div>
+		<div style="width: 120px;">12</div>
+		<div style="width: 160px;">16</div>
+		<div style="width: 200px;">20</div>
+		<div style="width: 240px;">24</div>
+		<div style="width: 280px;">28</div>
+		<div style="width: 320px;">32</div>
+		<div style="width: 360px;">36</div>
+	</div>
+	<div class="chart"> </div>
+		<script src="http://d3js.org/d3.v5.min.js"
+		charset="utf-8"> </script>
+	
+	<svg  id="vimage" height="500" width="500" style="border: 1px solid;">
+	     </svg> 
+	<button id="b">
+	clear
+	</button>
+	<button id="m">
+	move
+	</button>
+ 	 </body>
+  <script src="svg.js"></script>
+</html>
