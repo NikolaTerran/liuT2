@@ -31,7 +31,7 @@ def function5():
 	return 0
 
 def function6(num):
-	result = [y for y in range(num + 1) if num % y == 0]
+	result = [y for y in range(num + 1) if y != 0 and num % y == 0]
 	print(result)
 	
 ls_function(this_list)
