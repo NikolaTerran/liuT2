@@ -1,11 +1,48 @@
+import random
+#my_randoms = random.sample(xrange(100), 10)
+
+def q_sort(n):
+	ran_list = random.sample(range(n),n)
+	print(ran_list)
+	result = [y for x in ran_list for y in ran_list]
+	print(result)
+
+q_sort(20)
+
+def p_triple(n):
+	x = range(1,n)
+	y = range(1,n)
+	z = range(1,n)
+	x2 = [x1 for x1 in x 
+		 for y1 in y 
+		 for z1 in z 
+		 if x1 * x1 + y1 * y1 == z1 * z1]
+	y2 =  [y1 for x1 in x 
+	          for y1 in y  
+	          for z1 in z 
+	          if x1 * x1 + y1 * y1 == z1 * z1]
+	z2 = [z1 for x1 in x
+	         for y1 in y  
+                 for z1 in z 
+		 if x1 * x1 + y1 * y1 == z1 * z1]
+	#result = [a for a in range(1,n)
+	#	    for b in range(a,n)
+	#	    for c in range(b,n)
+	#	    if a * a + b * b == c * c]                                                                                         
+
+	print(x2)
+	print(y2)
+	print(z2)
+	#print(result)
+	
+#p_triple(100)
+
+
 def ls_function(list):
 	#x = input("type input")
 	result = [x for x in list if int(x) % 22 == 0]
 	print(result)
 	return 0
-
-this_list = ['88','22','33','44','55','66','00']
-list2 = [1,3,7,2,4,0,0,0,1,4,56,17,28,27,37,47]
 
 def function2(list):
 	result = [x for x in list if x % 10 == 7]
@@ -33,11 +70,4 @@ def function5():
 def function6(num):
 	result = [y for y in range(num + 1) if y != 0 and num % y == 0]
 	print(result)
-	
-ls_function(this_list)
 
-function2(list2)
-function3(list2)
-function4()
-function5()
-function6(100)
