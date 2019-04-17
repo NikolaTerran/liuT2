@@ -1,42 +1,58 @@
 import random
 #my_randoms = random.sample(xrange(100), 10)
 
+'''
 def q_sort(n):
 	ran_list = random.sample(range(n),n)
 	print(ran_list)
 	result = [y for x in ran_list for y in ran_list]
 	print(result)
-
-q_sort(20)
+'''
 
 def p_triple(n):
-	x = range(1,n)
-	y = range(1,n)
-	z = range(1,n)
-	x2 = [x1 for x1 in x 
-		 for y1 in y 
-		 for z1 in z 
-		 if x1 * x1 + y1 * y1 == z1 * z1]
-	y2 =  [y1 for x1 in x 
-	          for y1 in y  
-	          for z1 in z 
-	          if x1 * x1 + y1 * y1 == z1 * z1]
-	z2 = [z1 for x1 in x
-	         for y1 in y  
-                 for z1 in z 
-		 if x1 * x1 + y1 * y1 == z1 * z1]
-	#result = [a for a in range(1,n)
-	#	    for b in range(a,n)
-	#	    for c in range(b,n)
-	#	    if a * a + b * b == c * c]                                                                                         
-
-	print(x2)
-	print(y2)
-	print(z2)
-	#print(result)
+	result = [(x,y,z) for x in range(1,n)
+		    for y in range(x,n)
+		    for z in range(y,n)
+		    if x * x + y * y == z * z]                                                                                         
+	print(result)
 	
-#p_triple(100)
+p_triple(20)
 
+a = [1,2,3]
+b = [2,3,4]
+
+def union(a,b):
+	result = [x for x in a] + [x for x in b if x not in a]
+	print(result)
+
+union(a,b)
+
+def intersect(a,b):
+	result = [x for x in a if x in b]
+	print(result)
+
+intersect(a,b)
+
+def set_diff(u,a):
+	result = [x for x in u if x not in a]
+	print(result)
+
+set_diff(a,b)
+
+def sym_diff(u,a):
+	result = [x for x in u if x not in a] + [x for x in a if x not in u]
+	print(result)
+
+sym_diff(a,b)
+
+c = ["red","green","blue"]
+
+def cart_pdt(a,b):
+	result = [(x,y)for x in a 
+			for y in b]
+	print(result)
+
+cart_pdt(a,c)
 
 def ls_function(list):
 	#x = input("type input")
