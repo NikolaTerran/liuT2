@@ -1,0 +1,106 @@
+<!Doctype=html>
+<html>
+<head>
+<script type="text/javascript">
+
+
+</script>
+</head>
+<body>
+  please upload the school_data.csv file
+  <br>
+  <input type='file' accept='text/plain' onchange='openFile(event)'><br>
+  output is printed in console
+<div id='output'>
+</body>
+<footer>
+<script type="text/javascript">
+
+var data;
+
+function processData(allText){
+  var allTextLines = allText.split(/\r\n|\n/);
+  var headers = allTextLines[0].split(',');
+  var lines = [];
+
+  for (var i=1; i<allTextLines.length; i++) {
+      var data = allTextLines[i].split(',');
+      if (data.length == headers.length) {
+
+          var tarr = [];
+          for (var j=0; j<headers.length; j++) {
+              tarr.push(headers[j]+":"+data[j]);
+          }
+          lines.push(tarr);
+      }
+  }
+  data = lines;
+  console.log(data);
+  // alert(lines);
+  processData2(data);
+}
+
+function processData2(data){
+  var i;
+  var x = data.filter(function(n){
+    //console.log(n[2]);
+      return n[2].localeCompare("schoolyear:20052006") == 0;
+  });
+  var x = x.map(function(n){
+    return parseInt(n[26].substring(10));
+  });
+
+  var x = x.reduce((total, amount) => total + amount);
+
+  console.log("there are " + x + " asian students in school in school year 2005-2006");
+
+  //console.log("hi\n");
+}
+
+
+var openFile = function(event) {
+  var input = event.target;
+  //var data = "";
+
+  var reader = new FileReader();
+  reader.onload = function(){
+    var text = reader.result;
+    //data += "hello";
+    processData(text);
+    //console.log(text);
+    //var node = document.getElementById('output');
+    //node.innerText = text;
+    //console.log(reader.result.substring(0, 200));
+  };
+  console.log(data);
+  reader.readAsText(input.files[0]);
+
+  return data;
+};
+
+
+</script>
+  <!--
+  <script type="text/javascript">
+    var x=[1,2,3,4];
+    console.log("X:" + x);
+
+    var newX = x.map(function(n){
+      return n *2;
+    });
+    console.log("newX: " + newX);
+
+    var newnewX = x.filter(function(n){
+      return (n % 2 == 0);
+    });
+    console.log("newnewX:" + newnewX);
+
+    var newnewnewX = x.reduce(function(n){
+      return (x + x);
+    });
+    console.log("newnewnewX:"+ newnewnewX);
+  </script>
+-->
+</footer>
+
+</html>
